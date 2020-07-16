@@ -1,0 +1,538 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"se",
+				"self"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"H",
+				"HasNexLex"
+			],
+			[
+				"a",
+				"arr"
+			],
+			[
+				"s",
+				"stk"
+			],
+			[
+				"M",
+				"MathLogic"
+			],
+			[
+				"m",
+				"nMath"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"op",
+				"open2"
+			],
+			[
+				"e",
+				"ErrorMess"
+			],
+			[
+				"c",
+				"continue"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"reg",
+				"reg_exp"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"le",
+				"lexer"
+			],
+			[
+				"t",
+				"typeN"
+			],
+			[
+				"T",
+				"Type"
+			],
+			[
+				"fo",
+				"format_str"
+			],
+			[
+				"__",
+				"__repr__"
+			],
+			[
+				"grammar",
+				"grammar_V"
+			],
+			[
+				"ini",
+				"init_s"
+			],
+			[
+				"clo",
+				"close2_s"
+			],
+			[
+				"cl",
+				"close1_s"
+			],
+			[
+				"o",
+				"open1_s"
+			],
+			[
+				"l",
+				"lexToStr"
+			],
+			[
+				"vo",
+				"void_str"
+			],
+			[
+				"tre",
+				"trees"
+			],
+			[
+				"ou",
+				"outDict"
+			],
+			[
+				"Void",
+				"Void"
+			],
+			[
+				"no",
+				"nOpen2"
+			],
+			[
+				"nI",
+				"nID"
+			],
+			[
+				"ni",
+				"nInt"
+			],
+			[
+				"nc",
+				"nClose2"
+			],
+			[
+				"ope",
+				"open1"
+			],
+			[
+				"L",
+				"Lab1_v2"
+			],
+			[
+				"pt",
+				"print"
+			],
+			[
+				"i",
+				"itDigitD"
+			],
+			[
+				"w",
+				"word"
+			],
+			[
+				"ch",
+				"character"
+			],
+			[
+				"out",
+				"outStr"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"W",
+				"W"
+			],
+			[
+				"f",
+				"fkt"
+			],
+			[
+				"B",
+				"BusyChannels"
+			],
+			[
+				"r",
+				"roundabout"
+			],
+			[
+				"ra",
+				"range"
+			],
+			[
+				"ma",
+				"matrix"
+			],
+			[
+				"mat",
+				"matrixIndices"
+			],
+			[
+				"printa",
+				"printAll"
+			],
+			[
+				"p",
+				"printAbs"
+			],
+			[
+				"st",
+				"stay"
+			],
+			[
+				"sta",
+				"stay"
+			],
+			[
+				"j",
+				"jCount"
+			],
+			[
+				"time",
+				"timeP"
+			],
+			[
+				"ti",
+				"timeP"
+			],
+			[
+				"vr",
+				"vrt"
+			],
+			[
+				"fl",
+				"flRasp"
+			],
+			[
+				"pl",
+				"plt"
+			],
+			[
+				"P",
+				"Puasson"
+			],
+			[
+				"min",
+				"minMatr"
+			],
+			[
+				"mi",
+				"minMatr"
+			],
+			[
+				"max",
+				"maxMatr"
+			],
+			[
+				"pri",
+				"print"
+			],
+			[
+				"rt",
+				"right"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"print",
+				"printarr"
+			],
+			[
+				"C",
+				"count"
+			],
+			[
+				"win",
+				"wind_Level"
+			],
+			[
+				"el",
+				"else"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ru",
+				"Django: Run Server"
+			],
+			[
+				"run ",
+				"Django: Run Server"
+			],
+			[
+				"Django: R",
+				"Django: Run Server"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"dja",
+				"Build With: Python_Django"
+			],
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+			"python manage.py runserver",
+			"django runserver",
+			"manage.py runserver",
+			"python manage.py runserver"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Python/Django/shop"
+	],
+	"file_history":
+	[
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/D/Python/Django/shop/shop/settings.py",
+		"/D/Python/Django/shop/shop/urls.py",
+		"/D/Python/Django/shop/shop/wsgi.py",
+		"/D/Python/Django/shop/shop/asgi.py",
+		"/D/Python/Django/shop/shop/__init__.py",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/User/Python_Django.sublime-build",
+		"/D/Python/SPO/resorces.py",
+		"/D/Python/Django/shop/web/web/wsgi.py",
+		"/D/Python/Django/shop/web/web/asgi.py",
+		"/D/Python/Django/shop/web/web/urls.py",
+		"/D/Python/Django/shop/web/manage.py",
+		"/D/Python/Django/shop/manage.py",
+		"/D/Python/Django/shop/web/web/__init__.py",
+		"/D/Python/Django/shop/web/web/settings.py",
+		"/D/Python/SPO/MathLogic.py",
+		"/D/Python/SPO/Lab1_v2.py",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/User/Python_NLTK.sublime-build",
+		"/D/Python/SPO/Lab1_main.py",
+		"/D/Python/ModelK/main.py",
+		"/D/Загрузки/pythontest.py",
+		"/D/Python/SPO/functions.py",
+		"/D/Python/test.py",
+		"/D/Python/test1.py",
+		"/D/Python/Model1/M_Main.py",
+		"/D/Python/SPO/Lab1_v2",
+		"/D/Python/U_lab4.py",
+		"/D/Python/Flask/app/app.py",
+		"/D/Python/Flask/app/config.py",
+		"/D/Python/Flask/app/view.py",
+		"/D/Python/Flask/app/posts/templates/posts/index.html",
+		"/D/Python/Flask/app/posts/blueprint.py",
+		"/D/Python/Flask/app/models.py",
+		"/D/Python/Flask/app/main.py",
+		"/D/Python/Flask/app/templates/base.html",
+		"/D/Python/Flask/app/templates/indexc.html",
+		"/D/Python/Flask/app/templates/lab3.html",
+		"/D/Python/Flask/app/templates/index3.html",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/User/First_env.sublime-build",
+		"/D/Python/DZ2.py",
+		"/D/Python/Model5/main5_1.py",
+		"/C/Users/User/AppData/Roaming/Sublime Text 3/Packages/User/Flask_py.sublime-build",
+		"/D/Python/Model5/main5.py",
+		"/D/Python/Model3/mail.py",
+		"/D/Python/RE/TeleBot.py",
+		"/D/Python/Model2/Mod2.py",
+		"/D/Python/U_lab3.py",
+		"/D/Python/Spyral.py",
+		"/D/Python/DZ1_2.py",
+		"/D/Загрузки/WPy.py",
+		"/D/Загрузки/setup.py",
+		"/D/Python/Model/M_Class.py",
+		"/D/Python/DZ1_3.py",
+		"/D/Python/Model/M_Main.py",
+		"/D/Python/TeleBot.py",
+		"/D/Загрузки/pythontest(1).py",
+		"/D/Python/YesNo.py",
+		"/D/Python/DZ1_1.py",
+		"/D/Python/Prog1.py"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Python_Django.sublime-build",
+	"project": "Django_BS.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
