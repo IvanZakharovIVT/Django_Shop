@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Order items
+{% endblock %}
+{% block content %}
+<div>Order items</div>
+{% for item in items %}
+    <div class="row">
+        <div class="col-sm-6 col-md-3">
+            <div class="card" style="width: 18rem;background-color: Gainsboro;height: 400px;">
+                <a href="{{ item.product.get_absolute_url }}">
+                    <img style="width: 17rem; margin-left: 2%;margin-top: 2%;" 
+                    src="{{ MEDIA_URL }}{{ item.product.image.url }}"class="rounded"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title" ><a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a></h5>
+                    <p class="card-text"><p>{{ item.product.price }}</p></p>
+                    <p> {{ item.quantity }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+    <div class="product-detail">
+      <div class="media" style = "background-color: Gainsboro;">
+          <a href="#">
+              <img style="width: 25rem;margin-top: 8%;margin-left: 5%;" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="rounded">
+          </a>
+      <div class="media-body" style = "margin-left: 4%;">
+      <h3>{{ product.name }}</h3>
+        <h3><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h3>
+        <p class="price">${{ product.price }}</p>
+        {{ product.description|linebreaks }}
+      <div class="media-body">
+    <h5 class="media-heading">Max.Resolution:{{ product.maxResolution }}</h5>
+    <h5 class="media-heading">Max.Excerpt:{{ product.maxExcerpt }}</h5>
+    <h5 class="media-heading">megapixels:{{ product.megapixels }}</h5>
+    <h5 class="media-heading">rating:{{ product.rating }}</h5>
+  </div>
+  <form action="{% url "cart:cart_add" product.id %}" method="post">
+    {{ cart_product_form }}
+    {% csrf_token %}
+    <input type="submit" value="Add to cart">
+</form>
+</div>
+</div>
+</div>
+
+<div class="cart">
+    {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            Your cart:
+            <a href="{% url "cart:cart_detail" %}">
+                {{ total_items }} item{{ total_items|pluralize }},
+                ${{ cart.get_total_price }}
+            </a>
+        {% else %}
+            Your cart is empty.
+        {% endif %}
+    {% endwith %}
+</div>
+
+    <h1>My Blog</h1>
+    {% for post in posts %}
+        <h2>
+            <a>{{ post.title }}</a>
+        </h2>
+        <p class="date">
+            Published {{ post.publish }} by {{ post.author }}
+        </p>
+        {{ post.body|truncatewords:30|linebreaks }}
+    {% endfor %}
+
+    <form action="." method="post">
+        {{ post_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Add comment"></p>
+    </form>
+{% endblock %}

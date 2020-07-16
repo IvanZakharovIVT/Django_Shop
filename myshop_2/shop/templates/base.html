@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}My shop{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+.row {
+    display: inline-block; /* Отображать как строчный элемент */
+    vertical-align: top;
+/*    height: 80px; /* Высота блока */
+/*    width: 150px; /* Ширина блока */
+}
+#cadr {
+    display: inline-block;
+    background-color: Gainsboro;
+        height: 380px;
+}
+</style>
+
+
+<script type='text/javascript'>
+function popBox(string) {
+   /* После вызова окна подтверждения в переменную x будет возвращено true или false 
+   в зависимости от того, какую кнопку нажал пользователь */
+   alert(string);
+}
+</script>
+</head>
+<body style="background-color:LightGrey">
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/shop">MyShop</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/shop">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/orders/order_list">My Orders</a>
+      </li>
+    </ul>
+    <form class="form-inline">
+              {% if request.user.is_authenticated %}
+        <a class="nav-link" href="/account/logout">LogOut</a>
+        {% else %}
+        <a class="nav-link" href="/account/login">LogIn</a>
+        <a class="nav-link" href="/account/register">SignIn</a>
+        {% endif %}
+    </form>
+
+
+  </div>
+</nav>
+
+<div id="subheader">
+<div class="cart" style="background-color:WhiteSmoke;" >
+    {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            Your cart:
+            <a href="{% url "cart:cart_detail" %}">
+                {{ total_items }} item{{ total_items|pluralize }},
+                ${{ cart.get_total_price }}
+            </a>
+        {% else %}
+            Your cart is empty.
+        {% endif %}
+    {% endwith %}
+</div>
+</div>
+
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+<!-- Latest compiled and minified JavaScript -->
+
+</html>
