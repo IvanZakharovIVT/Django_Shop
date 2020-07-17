@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect, redirect
 from .models import Profile
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
@@ -43,6 +43,8 @@ def register(request):
 
 
 def user_login(request):
+    if request.user.is_authenticated:
+        logout(request)
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -64,5 +66,8 @@ def user_login(request):
 
 
 def logout_view(request):
+    print ("wtf 1")
     logout(request)
-    return render(user_login(request))
+    print ("wtf 2")
+    return redirect('/')
+#    return HttpResponseRedirect('account/login.html')

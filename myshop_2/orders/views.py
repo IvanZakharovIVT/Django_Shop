@@ -15,10 +15,16 @@ def order_create(request):
             order = form.save()
             order.person = request.user
             for item in cart:
+                if item['quantity'] > item['product'].stock:
+                    item['quantity'] = item['product'].stock
                 OrderItem.objects.create(order=order,
                                          product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'])
+                item['product'].stock -= item['quantity']
+                if item['product'].stock == 0:
+                    item['product'].available = False
+                item['product'].save()
             # очистка корзины
             cart.clear()
             order.person = request.user

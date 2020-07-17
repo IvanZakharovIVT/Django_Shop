@@ -12,7 +12,7 @@
       <div class="media-body" style = "margin-left: 4%;">
       <h3>{{ product.name }}</h3>
         <h3><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h3>
-        <p class="price">${{ product.price }}</p>
+        <p class="price">₽{{ product.price }}</p>
         {{ product.description|linebreaks }}
       <div class="media-body">
     <h5 class="media-heading">Max.Resolution:{{ product.maxResolution }}</h5>
@@ -35,7 +35,7 @@
             Your cart:
             <a href="{% url "cart:cart_detail" %}">
                 {{ total_items }} item{{ total_items|pluralize }},
-                ${{ cart.get_total_price }}
+                ₽ {{ cart.get_total_price }}
             </a>
         {% else %}
             Your cart is empty.
@@ -45,18 +45,52 @@
 
     <h1>My Blog</h1>
     {% for post in posts %}
-        <h2>
-            <a>{{ post.title }}</a>
-        </h2>
-        <p class="date">
-            Published {{ post.publish }} by {{ post.author }}
-        </p>
-        {{ post.body|truncatewords:30|linebreaks }}
+    <div class="media w3-border w3-border-black" style = "background: Aquamarine">
+        <div class ="w3-border w3-border-black w3-bottombar w3-rightbar" style = "background: LightGreen;">
+        <h3>
+            <a style = "vertical-align: top;">{{ post.author }}</a>
+        </h3>
+    </div>
+        <div class="media-body">
+            <p class="date">
+                <h3> {{ post.title }} </h3>
+                Published {{ post.publish }}
+            </p>
+            {{ post.body|truncatewords:30|linebreaks }}
+            rating:{{ post.rating }}/5
+        </div>
+    </div>
+
     {% endfor %}
 
-    <form action="." method="post">
-        {{ post_form.as_p }}
+    <form action="." method="post" style= "background: LightGreen;width: 45rem;">
         {% csrf_token %}
+            <div class="w3-container w3-blue"  style = "width: 45rem;">
+  <h2>New Comment</h2>
+</div>
+
+  <p>
+  <label>Title</label>
+  <input class="w3-input" name = "title" type="text" style = "width: 44rem;"></p>
+  <p>
+  <label>Comment</label>
+  <textarea class="w3-input" name = "body" type="text" style="height: 5rem;resize: none;width: 44rem;"></textarea>
+  <p>
+    <div class="slidecontainer">
+  <input type="range" min="0" max="5" value="2.5" step="0.5" class="slider" name = "rating" id="myRange"style = "width: 44rem;">
+  <p>Rating: <span id="demo"></span></p>
+</div>
+</p>
         <p><input type="submit" value="Add comment"></p>
     </form>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
 {% endblock %}

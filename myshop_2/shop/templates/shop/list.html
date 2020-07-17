@@ -5,38 +5,69 @@
     {% if category %}{{ category.name }}{% else %}Products{% endif %}
 {% endblock %}
 {% block content %}
-    <div id="sidebar">
-        <form class="form-inline">
+    <div class="w3-sidebar w3-bar-block w3-large w3-light-grey" style="width:15%;">
+        <small>
+        <form method="POST" class="form-inline">
+        {% csrf_token %}
+        <a class="w3-bar-item">
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-green">Category</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+                {% for d in lists.listC %}
+                <a class="w3-bar-item w3-button">
+                <h5><input type="checkbox" name="categorys" value="{{ d }}" />{{ d }}</h5>
+                </a>
+                {% endfor %}
 
-<form action="#" method="POST">
-    {% csrf_token %}
+            </div>
+        </div>
+    </a>
+    <a class="w3-bar-item">
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-green">Resolution</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+                {% for d in lists.listRes %}
+                <a class="w3-bar-item w3-button">
+                <h5><input type="checkbox" name="resolution" value="{{ d }}" />{{ d }}</h5>
+                </a>
+                {% endfor %}
 
-    <label class="my-1 mr-2" for="maxResolution">Resolution</label>
-  <select class="custom-select my-1 mr-sm-2" id="maxResolution" name = "maxResolution">
-    <option value="6000x4000">6000x4000</option>
-    <option value="5472x3648">5472x3648</option>
-    <option value="5184x3456">5184x3456</option>
-  </select>
-    <input type="submit" value="OK">
-</form>
-  <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="sZero">6000x4000</label>
-</div>
-        <h3>Categories</h3>
-
-        <ul>
-            <li {% if not category %}class="selected"{% endif %}>
-                <a href="{% url 'shop:product_list' %}">All</a>
-            </li>
-            {% for c in categories %}
-                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
-                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+            </div>
+        </div>
+    </a>
+    <a class="w3-bar-item">
+        ₽ min Price
+    </a>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="min.price" value = '6000' name = "minPrice" style="width:160px;">
     </div>
-    <div id="main" class="product-list">
+    <a class="w3-bar-item">
+        ₽ max Price
+    </a>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="max.price" value = "1000000" name = "maxPrice"style="width:160px;">
+    </div>
+    <a class="w3-bar-item">
+        Excerption
+    </a>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Excerpt" value = "0" name = "expre"style="width:160px;">
+    </div>
+    <a class="w3-bar-item">
+        Megapixels
+    </a>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Megapixels" value = "2" name = "megapixels"style="width:160px;">
+    </div>
+        <input type="submit" value="Search" >
+        </form>
+
+</div>
+</small>
+<div style="margin-left:7%">
+
+<div class="w3-container">
+    <div id="content" name="content" class="main">
         <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
         {% for product in products %}
             <div class="row">
@@ -48,11 +79,14 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title" ><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h5>
-                            <p class="card-text"><p>{{ product.price }}</p></p>
+                            <p class="card-text"><p>price:₽ {{ product.price }}</p></p>
+                            <p class="card-text"><p>rating:{{ product.rating }}/5</p></p>
                         </div>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
+</div>
+</div>
 {% endblock %}
