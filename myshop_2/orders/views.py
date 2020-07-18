@@ -42,11 +42,6 @@ def order_list(request):
         pass
     this_user = request.user
     orders = this_user.order.all()
-    items = orders[0].items.all()
-    print ("so something")
-    print ("id", orders[0].id)
-    print ("items", items[0].product)
-    print ("items", items[0].product.description)
 
     return render(request, 'orders/order/order_list.html',
                   {'orders': orders})

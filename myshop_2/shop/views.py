@@ -23,13 +23,15 @@ def product_list(request, category_slug=None):
         prod = Product.objects.filter(available=True)
         prod_list = []
         for p in prod:
-            print (str(p.maxResolution), minPrice)
+            print (p)
             if maxPrice >= int(p.price) >= minPrice:
-                if p.category in cat or not cat:
-                    print (str(p.maxResolution) in res)
+                print ("price")
+                if str(p.category) in cat or not cat:
+                    print ("cat")
                     if str(p.maxResolution) in res or not res:
                         print ("res is ok")
                         if int(p.maxExcerpt) > expres and float(p.megapixels) > megapixels:
+                            print ("exc")
                             prod_list.append(p)
         print (prod_list)
         prod_list.sort(key=sortByRating)
